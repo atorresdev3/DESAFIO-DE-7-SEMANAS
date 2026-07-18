@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desafío 7 Días</title>
+        <meta name="description" content="Desafío de 7 pasos para transformar tu mentalidad, hábitos y dinero en solo 20 minutos al día." />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media = 'all'" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=swap" rel="stylesheet" media="print" onload="this.media = 'all'" />
+
+        <!--FAVICONS-->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="48x48" href="favicon/favicon-48x48.png"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-48x48.png"/>
+
+        <!-- Apple iOS (iPhone, iPad) -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
+
+        <!-- Android / PWA -->
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png"/>
+        <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png"/>
+
+        <!-- Web App Manifest -->
+        <link rel="manifest" href="favicon/site.webmanifest"/>
+
+        <!-- Color de barra del navegador (móvil) -->
+        <meta name="theme-color" content="#0f1c2e" />
+        <meta name="msapplication-TileColor" content="#0f1c2e"/>
+
+    </head>
+
+    <body>
+        <!-- SVG ICONS -->
+        <svg style="display: none" aria-hidden="true">
+            <symbol id="icon-check" viewBox="0 0 24 24">
+                <path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </symbol>
+            <symbol id="icon-gift" viewBox="0 0 48 48">
+                <rect x="8" y="20" width="32" height="22" rx="2" stroke="currentColor" stroke-width="2" fill="none" />
+                <rect x="8" y="14" width="32" height="8" rx="2" stroke="currentColor" stroke-width="2" fill="none" />
+                <line x1="24" y1="14" x2="24" y2="42" stroke="currentColor" stroke-width="2" />
+                <path d="M24 14C24 14 18 6 14 9C10 12 16 14 24 14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none" />
+                <path d="M24 14C24 14 30 6 34 9C38 12 32 14 24 14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none" />
+            </symbol>
+            <symbol id="icon-shield" viewBox="0 0 24 24">
+                <path
+                    fill-rule="evenodd"
+                    d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793z"
+                />
+            </symbol>
+            <symbol id="icon-trophy" viewBox="0 0 24 24">
+                <path
+                    d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"
+                />
+            </symbol>
+            <symbol id="icon-lock" viewBox="0 0 24 24">
+                <path
+                    fill-rule="evenodd"
+                    d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"
+                />
+            </symbol>
+        </svg>
+
+        <main>
+            <!-- SECCIÓN -->
+            <section id="hero" aria-label="Presentación principal">
+                <div class="hero__glow" aria-hidden="true"></div>
+                <div class="hero__container container">
+                    <div class="hero__content">
+                        <h1 class="hero__headline">
+                            El Sistema Definitivo para Transformar tu
+                            <em class="hero__accent">Mentalidad, tus Hábitos</em>
+                            y tu Dinero en 7 semanas
+                        </h1>
+                        <p class="hero__subtitle">Un desafío práctico que convierte tu intención en resultados reales, paso a paso, en solo 20 minutos al día.</p>
+                    </div>
+
+                    <div class="hero__mockup">
+                        <div class="hero__mockup-glow" aria-hidden="true"></div>
+                        <img src="img/MAPAHEADER.webp" alt="Mapa conceptual del Desafío 7 Días" width="520" height="520" loading="eager" />
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECCIÓN 2  QUÉ ES EL DESAFÍO -->
+            <section id="que-es" aria-label="Qué es el desafío">
+                <div class="container quees__container">
+                    <h2 class="section-title">¿De qué trata realmente <em class="accent">este desafío?</em></h2>
+                    <p class="section-text">
+                        Durante 7 días, recibirás 1 herramienta práctica diaria para estructurar tu mentalidad, tus hábitos Y tus finanzas. Un plan paso a paso diseñado para que lo repitas y domines
+                        durante las siguientes 7 semanas hasta que tus resultados sean automáticos.
+                    </p>
+                    <div class="quees__imagen">
+                        <img src="img/CALENDAR1.webp" alt="Calendario semanal del Desafío 7 Días" width="700" height="500" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECCIÓN 3  QUÉ LOGRARÁS -->
+            <section id="que-lograras" aria-label="Qué lograrás">
+                <div class="container logros__container">
+                    <p class="section-text">
+                        Al completar cada paso, avanzas en un ciclo de 7 días diseñado para que apliques lo aprendido de inmediato. Y a diferencia de otros programas, este es un sistema vivo que se
+                        actualiza constantemente para evolucionar contigo.
+                    </p>
+                    <p class="section-text">Al llegar a la meta, te espera una recompensa exclusiva para acelerar tus resultados.</p>
+
+                    <h2 class="section-title">¿Qué lograrás al <em class="accent">terminar el desafío?</em></h2>
+
+                    <ul class="logros__lista">
+                        <li class="logros__item reveal-card">
+                            <span class="logros__icono">
+                                <span class="material-symbols-rounded">currency_exchange</span>
+                            </span>
+                            <div class="logros__item-texto">
+                                <strong>Elimina los bloqueos económicos:</strong>
+                                Cambia tu relación con el dinero y construye una estructura de ingresos predecible.
+                            </div>
+                        </li>
+                        <li class="logros__item reveal-card">
+                            <span class="logros__icono">
+                                <span class="material-symbols-rounded">auto_mode</span>
+                            </span>
+                            <div class="logros__item-texto">
+                                <strong>Crea hábitos automáticos:</strong>
+                                Diseña rutinas de alto rendimiento que no dependan de tu estado de ánimo.
+                            </div>
+                        </li>
+                        <li class="logros__item reveal-card">
+                            <span class="logros__icono">
+                                <span class="material-symbols-rounded">my_location</span>
+                            </span>
+                            <div class="logros__item-texto">
+                                <strong>Enfoque inquebrantable:</strong>
+                                Elimina el ruido, la procrastinación y concéntrate solo en lo que te da resultados reales.
+                            </div>
+                        </li>
+                        <li class="logros__item reveal-card">
+                            <span class="logros__icono">
+                                <span class="material-symbols-rounded">bolt</span>
+                            </span>
+                            <div class="logros__item-texto">
+                                <strong>Acción sin dudas:</strong>
+                                Vence la parálisis por análisis y toma decisiones firmes para emprender.
+                            </div>
+                        </li>
+                        <li class="logros__item reveal-card">
+                            <span class="logros__icono">
+                                <span class="material-symbols-rounded">trending_up</span>
+                            </span>
+                            <div class="logros__item-texto">
+                                <strong>Sistemas escalables:</strong>
+                                Deja de sobrecargar tu día y empieza a operar de forma estructurada.
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="logros__transicion">
+                        <h2 class="section-title">¿Qué tiene el desafío <em class="accent">por dentro?</em></h2>
+                        <p class="section-text">
+                            Olvídate de la teoría y de acumular más lecturas. Dentro encontrarás un ecosistema de 9 componentes entre herramientas y libros diseñados para la ejecución inmediata.
+                        </p>
+                        <p class="section-text">
+                            No son elementos aislados; funcionan como un engranaje completo para que construyas tu sistema, aceleres tus resultados y operes con una estructura clara.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECCIÓN 4  COMPONENTES -->
+            <section id="componentes" aria-label="Componentes del desafío">
+                <div class="container componentes__container">
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.1</span>
+                        <div class="comp-card__media">
+                            <img src="img/HABITOS EXITOSOS.webp" alt="Hábitos Silenciosos" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">Hábitos Silenciosos</h3>
+                            <p class="comp-card__desc">Diseña rutinas automáticas que trabajen para ti, eliminando la dependencia de tu motivación diaria.</p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.2</span>
+                        <div class="comp-card__media">
+                            <img src="img/DASHBOARD.webp" alt="Dashboard Sin Filtros" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">Dashboard Sin Filtros</h3>
+                            <p class="comp-card__desc">
+                                Descubre exactamente a dónde va tu dinero cada mes, identifica tus fugas financieras y recupera lo que estás perdiendo sin darte cuenta. Solo ingresas tus números y el
+                                Dashboard hace el resto.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.3</span>
+                        <div class="comp-card__media">
+                            <img src="img/EL AND EMPRENDEDOR.webp" alt="El ADN Emprendedor" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">El ADN Emprendedor</h3>
+                            <p class="comp-card__desc">
+                                Emprender no es para unos pocos elegidos. Es para quien decide activar lo que ya lleva dentro. Este libro despierta el emprendedor que siempre fuiste y te muestra cómo
+                                construir desde donde estás hoy.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.4</span>
+                        <div class="comp-card__media">
+                            <img src="img/TRACKERMOKUP.webp" alt="Tracker de Hábitos Exitosos" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">Tracker de Hábitos Exitosos</h3>
+                            <p class="comp-card__desc">La plantilla visual exacta para medir tu consistencia y asegurar que avanzas todos los días.</p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.5</span>
+                        <div class="comp-card__media">
+                            <img src="img/EL INTERRUPTOR MENTAL.webp" alt="El Interruptor Mental" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">El Interruptor Mental</h3>
+                            <p class="comp-card__desc">
+                                Tu realidad exterior es el reflejo exacto de lo que crees por dentro. Este libro reprograma las creencias que te frenan y activa la mentalidad de las personas que
+                                construyen resultados extraordinarios sin importar desde dónde empiezan.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.6</span>
+                        <div class="comp-card__media">
+                            <img src="img/PODCAST.webp" alt="Historias de Mentes Maestras Podcast" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">Historias de Mentes Maestras Podcast</h3>
+                            <p class="comp-card__desc">
+                                Aprende de los grandes visionarios que cambiaron el mundo de los negocios y las finanzas. Cada episodio te revela los secretos, las mentalidades y las decisiones que
+                                marcaron su antes y su después para que tú las apliques en tu propio camino.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.7</span>
+                        <div class="comp-card__media">
+                            <img src="img/EL SEGUNDO SUELDO.webp" alt="El Segundo Sueldo" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">El Segundo Sueldo</h3>
+                            <p class="comp-card__desc">
+                                Tu salario es el punto de partida, no el límite. Esta guía te muestra 5 métodos reales para generar ingresos extra desde Latinoamérica esta semana, sin experiencia
+                                previa y sin dejar lo que ya haces.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.8</span>
+                        <div class="comp-card__media">
+                            <img src="img/MEMBRESIA.webp" alt="Membresía VIP" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">Membresía VIP</h3>
+                            <p class="comp-card__desc">
+                                Contenido premium inédito de finanzas, inteligencia artificial y negocios que jamás compartimos en ningún otro lugar, acceso anticipado a lanzamientos exclusivos y
+                                recursos de alto impacto que no encontrarás en ningún canal gratuito.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="comp-card reveal-card">
+                        <span class="comp-card__badge">N.9</span>
+                        <div class="comp-card__media">
+                            <img src="img/7 DIAS SIN EXCUSAS.webp" alt="7 Días Sin Excusas" width="320" height="240" loading="lazy" />
+                        </div>
+                        <div class="comp-card__body">
+                            <h3 class="comp-card__title">7 Días Sin Excusas</h3>
+                            <p class="comp-card__desc">
+                                El libro que te lleva de la intención a la acción en una semana. Cada día un sistema concreto de 20 minutos para transformar tu mente, tus hábitos y tu dinero sin
+                                excusas y sin vueltas.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECCIÓN 5 BONUS -->
+            <section id="bonus" aria-label="Bonus incluidos">
+                <div class="container bonus-section__container">
+                    <p class="bonus-section__intro">Y eso no es todo. Junto a estos 9 complementos también recibirás 3 bonus diseñados para potenciar tu camino y multiplicar tus resultados.</p>
+
+                    <div class="bonus-section__grid">
+                        <article class="bonus-card reveal-card">
+                            <svg class="bonus-card__crest" aria-hidden="true">
+                                <use href="#icon-gift"></use>
+                            </svg>
+                            <div class="bonus-card__media">
+                                <img src="img/BONUS 1.webp" alt="Despierta tu Mentalidad de Negocio" width="400" height="300" loading="lazy" />
+                            </div>
+                            <div class="bonus-card__body">
+                                <span class="bonus-card__eyebrow">Bonus #1</span>
+                                <h3 class="bonus-card__title">Despierta tu Mentalidad de Negocio</h3>
+                                <p class="bonus-card__desc">
+                                    Aprende a ver oportunidades de dinero donde otros solo ven problemas. Este bonus te enseña a pensar como emprendedor desde hoy, sin importar si nunca has tenido un
+                                    negocio en tu vida.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="bonus-card reveal-card">
+                            <svg class="bonus-card__crest" aria-hidden="true">
+                                <use href="#icon-gift"></use>
+                            </svg>
+                            <div class="bonus-card__media">
+                                <img src="img/BONUS..2.webp" alt="Maestría de Ventas" width="400" height="300" loading="lazy" />
+                            </div>
+                            <div class="bonus-card__body">
+                                <span class="bonus-card__eyebrow">Bonus #2</span>
+                                <h3 class="bonus-card__title">Maestría de Ventas</h3>
+                                <p class="bonus-card__desc">
+                                    Descubre los 6 disparadores mentales que hacen que una persona compre sin dudarlo. Aplícalos en tu negocio, tus redes o tu vida diaria y convierte conversaciones en
+                                    ventas sin presionar ni manipular a nadie.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="bonus-card reveal-card">
+                            <svg class="bonus-card__crest" aria-hidden="true">
+                                <use href="#icon-gift"></use>
+                            </svg>
+                            <div class="bonus-card__media">
+                                <img src="img/SOPRESA.webp" alt="Bonus Sorpresa" width="400" height="300" loading="lazy" />
+                            </div>
+                            <div class="bonus-card__body">
+                                <span class="bonus-card__eyebrow">Bonus Sorpresa</span>
+                                <h3 class="bonus-card__title">No lo vimos venir</h3>
+                                <p class="bonus-card__desc">
+                                    El verdadero premio es para los que llegan hasta el final. No revelamos qué es. Solo que quienes lo han recibido dicen que por sí solo cambió completamente su
+                                    juego. Tú decides si llegas hasta ahí.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECCIÓN 6 OFERTA -->
+            <section class="offer" id="precio" aria-label="Precio y oferta">
+                <!-- Anchors de tracking — NO borrar -->
+                <span id="recapitulacion" style="position: absolute; top: 55%; pointer-events: none" aria-hidden="true"></span>
+                <span id="compra-2" style="position: absolute; bottom: 5%; pointer-events: none" aria-hidden="true"></span>
+
+                <div class="offer__glow" aria-hidden="true"></div>
+                <div class="container offer__container">
+                    <h2 class="offer__title">
+                        ¿Cómo puedo acceder al
+                        <em class="offer__title-accent">Desafío ahora mismo?</em>
+                    </h2>
+                    <p class="offer__subtitle">Puedes obtener el sistema completo con todos sus complementos y bonus por solo:</p>
+
+                    <div class="offer-card">
+                        <!-- Mockup flotante entre fondo y tarjeta -->
+                        <div class="offer-card__mockup">
+                            <img src="img/PAQUETEE.webp" alt="Paquete completo del Desafío 7 Días" width="520" height="325" />
+                        </div>
+
+                        <!-- Lista de componentes con precios -->
+                        <ul class="offer-card__list">
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Hábitos Silenciosos</strong>
+                                    <span class="offer-card__old">Valorado en: $10 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Dashboard Sin Filtros</strong>
+                                    <span class="offer-card__old">Valorado en: $10 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>El ADN Emprendedor</strong>
+                                    <span class="offer-card__old">Valorado en: $10 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Tracker de Hábitos Exitosos</strong>
+                                    <span class="offer-card__old">Valorado en: $7 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>El Interruptor Mental</strong>
+                                    <span class="offer-card__old">Valorado en: $10 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Historias de Mentes Maestras Podcast</strong>
+                                    <span class="offer-card__old">Valorado en: $10 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>El Segundo Sueldo</strong>
+                                    <span class="offer-card__old">Valorado en: $10 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Membresía VIP</strong>
+                                    <span class="offer-card__old">Valorado en: $22 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>7 Días Sin Excusas</strong>
+                                    <span class="offer-card__old">Valorado en: $10 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-gift"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Bonus #1: Despierta tu Mentalidad de Negocio</strong>
+                                    <span class="offer-card__old">Valorado en: $7 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-gift"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Bonus #2: Maestría de Ventas</strong>
+                                    <span class="offer-card__old">Valorado en: $7 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                            <li class="offer-card__item">
+                                <svg class="offer-card__icon" aria-hidden="true">
+                                    <use href="#icon-gift"></use>
+                                </svg>
+                                <span class="offer-card__text"
+                                    ><strong>Bonus Sorpresa</strong>
+                                    <span class="offer-card__old">Valorado en: $7 USD</span>
+                                    <span class="offer-card__free">HOY GRATIS</span>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="offer-card__divider" aria-hidden="true"></div>
+
+                        <p class="offer-card__valued">Todo esto está valorado por <em>más de 120 dólares</em></p>
+                        <p class="offer-card__leadin">Hoy te llevarás todo esto por solo:</p>
+                        <p class="offer-card__price">
+                            <span class="offer-card__price-amount" data-start="120" data-end="7.90">$120.00</span>
+                            <span class="offer-card__price-usd">USD</span>
+                        </p>
+                        <p class="offer-card__arrow">↓ Haz clic en el botón de abajo ↓</p>
+
+                        <a href="https://pay.hotmart.com/O106173150J?checkoutMode=10" target="_blank" class="btn btn--amber offer-card__cta btn__compra"> COMPRA AHORA </a>
+
+                        <div class="offer-card__badges">
+                            <div class="offer-card__badge">
+                                <svg aria-hidden="true"><use href="#icon-shield"></use></svg>
+                                <span
+                                    >Compra<br class="badge-break" />
+                                    Segura</span
+                                >
+                            </div>
+                            <div class="offer-card__badge">
+                                <svg aria-hidden="true"><use href="#icon-trophy"></use></svg>
+                                <span
+                                    >Satisfacción<br class="badge-break" />
+                                    Garantizada</span
+                                >
+                            </div>
+                            <div class="offer-card__badge">
+                                <svg aria-hidden="true"><use href="#icon-lock"></use></svg>
+                                <span
+                                    >Privacidad<br class="badge-break" />
+                                    Protegida</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- Testimonios y pcontadores -->
+            <section id="testimonios" aria-label="Testimonios y prueba social">
+                <div class="container testimonios__container">
+                    <h2 class="section-title">Ellos ya dieron el primer paso. <em class="accent">¿Y tú?</em></h2>
+
+                    <!-- Contadores animados — se activan por IntersectionObserver -->
+                    <div class="contadores__grid">
+                        <div class="stat-card">
+                            <div class="stat-card__cifra">
+                                <span class="stat-card__numero" data-target="500" data-suffix="+">0+</span>
+                            </div>
+                            <p class="stat-card__label--top">PERSONAS QUE YA COMPLETARON</p>
+                            <p class="stat-card__label--bottom">el Desafío de 7 Días</p>
+                        </div>
+
+                        <div class="stat-card stat-card--highlight">
+                            <div class="stat-card__cifra">
+                                <span class="stat-card__numero" data-target="152000" data-suffix="+" data-format="comma">0+</span>
+                            </div>
+                            <p class="stat-card__label--top">MIEMBROS ACTIVOS</p>
+                            <p class="stat-card__label--bottom">de la comunidad</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card__cifra">
+                                <span class="stat-card__numero" data-target="95" data-suffix="%">0%</span>
+                            </div>
+                            <p class="stat-card__label--top">SATISFACCIÓN</p>
+                            <p class="stat-card__label--bottom">garantizada</p>
+                        </div>
+                    </div>
+
+                    <!-- Carrusel de testimonios con auto-scroll y swipe -->
+                    <div class="testimonials__carousel">
+                        <div class="testimonials__track">
+                            <!-- Set 1 — visible para lectores de pantalla -->
+                            <figure class="testimonials__card">
+                                <img src="img/Testimonios/SLIDE 1.webp" alt="Testimonio de cliente 1" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card">
+                                <img src="img/Testimonios/SLIDE 2.webp" alt="Testimonio de cliente 2" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card">
+                                <img src="img/Testimonios/SLIDE 3.webp" alt="Testimonio de cliente 3" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card">
+                                <img src="img/Testimonios/SLIDE 4.webp" alt="Testimonio de cliente 4" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card">
+                                <img src="img/Testimonios/SLIDE 5.webp" alt="Testimonio de cliente 5" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card">
+                                <img src="img/Testimonios/SLIDE 6.webp" alt="Testimonio de cliente 6" width="280" height="380" loading="eager" />
+                            </figure>
+                            <!-- Set 2 — duplicado para loop infinito, oculto de lectores de pantalla -->
+                            <figure class="testimonials__card" aria-hidden="true">
+                                <img src="img/Testimonios/SLIDE 1.webp" alt="Testimonio de cliente 1" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card" aria-hidden="true">
+                                <img src="img/Testimonios/SLIDE 2.webp" alt="Testimonio de cliente 2" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card" aria-hidden="true">
+                                <img src="img/Testimonios/SLIDE 3.webp" alt="Testimonio de cliente 3" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card" aria-hidden="true">
+                                <img src="img/Testimonios/SLIDE 4.webp" alt="Testimonio de cliente 4" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card" aria-hidden="true">
+                                <img src="img/Testimonios/SLIDE 5.webp" alt="Testimonio de cliente 5" width="280" height="380" loading="eager" />
+                            </figure>
+                            <figure class="testimonials__card" aria-hidden="true">
+                                <img src="img/Testimonios/SLIDE 6.webp" alt="Testimonio de cliente 6" width="280" height="380" loading="eager" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!--  garantia-->
+            <section id="garantia" aria-label="Garantía de 7 días">
+                <div class="garantia__glow" aria-hidden="true"></div>
+                <div class="container garantia__container">
+                    <div class="garantia__media">
+                        <div class="garantia__sello-wrap">
+                            <img src="img/7Guarantee.webp" alt="Garantía 7 días y satisfacción" width="480" height="auto" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <div class="garantia__content">
+                        <h2 class="section-title">Tu inversión está <em class="accent">100% protegida</em></h2>
+                        <p class="section-text">
+                            Estamos tan seguros del valor del Desafío de 7 Días que lo respaldamos con una garantía incondicional. Si en los primeros 7 días sientes que no era para ti te devolvemos
+                            cada centavo. Sin preguntas, sin formularios, sin complicaciones. Entra con confianza total porque el único riesgo aquí es quedarte donde estás.
+                        </p>
+                        <a href="https://pay.hotmart.com/O106173150J?checkoutMode=10" target="_blank" class="btn btn--amber garantia__cta btn__compra"> QUIERO EL DESAFÍO CON GARANTÍA </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- FAQ -->
+            <section id="faq" aria-label="Preguntas frecuentes">
+                <div class="container faq__container">
+                    <h2 class="section-title faq__title">Preguntas <em class="accent">frecuentes</em></h2>
+
+                    <div class="faq__list">
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" aria-controls="faq-a-1" id="faq-t-1">
+                                <span>¿Cómo accedo al producto después de comprar?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq__answer-wrapper" id="faq-a-1" role="region" aria-labelledby="faq-t-1">
+                                <p class="faq__answer">
+                                    Inmediatamente después de tu compra recibirás un correo con tu acceso al área de miembros donde encontrarás todos los recursos organizados y listos para usar desde
+                                    ese mismo momento.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" aria-controls="faq-a-2" id="faq-t-2">
+                                <span>¿Cómo es el proceso de compra?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq__answer-wrapper" id="faq-a-2" role="region" aria-labelledby="faq-t-2">
+                                <p class="faq__answer">Haz clic en el botón de acceso, completa tus datos y elige tu forma de pago. En menos de 2 minutos ya estás adentro.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" aria-controls="faq-a-3" id="faq-t-3">
+                                <span>¿En qué formato están los recursos?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq__answer-wrapper" id="faq-a-3" role="region" aria-labelledby="faq-t-3">
+                                <p class="faq__answer">
+                                    Son herramientas y complementos 100% digitales, listos para usar de inmediato desde cualquier dispositivo, en cualquier lugar y en cualquier momento.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" aria-controls="faq-a-4" id="faq-t-4">
+                                <span>¿Con un solo pago tengo todo el acceso?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq__answer-wrapper" id="faq-a-4" role="region" aria-labelledby="faq-t-4">
+                                <p class="faq__answer">Sí. Un único pago de $7.90 te da acceso a los 9 complementos, los 3 bonus y todas las actualizaciones futuras sin costo adicional.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" aria-controls="faq-a-5" id="faq-t-5">
+                                <span>¿Los recursos son accesibles desde el celular?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq__answer-wrapper" id="faq-a-5" role="region" aria-labelledby="faq-t-5">
+                                <p class="faq__answer">Sí. Todo el contenido está disponible desde cualquier dispositivo sin restricciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question" aria-expanded="false" aria-controls="faq-a-6" id="faq-t-6">
+                                <span>Si tengo algún problema, ¿dónde puedo escribir?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq__answer-wrapper" id="faq-a-6" role="region" aria-labelledby="faq-t-6">
+                                <p class="faq__answer">
+                                    Escríbenos a
+                                    <a href="mailto:mentesmaestrasdigital@gmail.com" class="faq__link">mentesmaestrasdigital@gmail.com</a>
+                                    o puedes hacer clic
+                                    <a href="https://wa.me/573136647878?text=Hola%2C%20quiero%20más%20información%20sobre%20el%20Desafío%20de%207%20Días" class="faq__link" target="_blank">aquí</a>
+                                    para enviarnos un mensaje directo a WhatsApp y nos aseguraremos de brindarte toda la ayuda que necesitas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container site-footer__inner">
+                <nav class="site-footer__links" aria-label="Enlaces legales">
+                    <a href="#" class="site-footer__link">Políticas de Privacidad</a>
+                </nav>
+                <p class="site-footer__copyright">© 2026 Mentes Maestras</p>
+            </div>
+        </footer>
+
+        <script src="js/main.js" defer></script>
+    </body>
+</html>
