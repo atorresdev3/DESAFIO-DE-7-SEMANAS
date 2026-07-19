@@ -1,5 +1,5 @@
 const PIXEL_ID = '1027488963474619';
-const META_CAPI_URL = `https://graph.facebook.com/v19.0/${PIXEL_ID}/events`;
+const META_CAPI_URL = `https://graph.facebook.com/v22.0/${PIXEL_ID}/events`;
 
 const ALLOWED_ORIGINS = [
 	'https://clubmentesmaestras.online',
