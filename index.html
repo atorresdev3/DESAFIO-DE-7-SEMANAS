@@ -12,26 +12,108 @@
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=swap" rel="stylesheet" media="print" onload="this.media = 'all'" />
 
         <!--FAVICONS-->
-        <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="48x48" href="favicon/favicon-48x48.png"/>
-        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-48x48.png"/>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="favicon/favicon-48x48.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-48x48.png" />
 
         <!-- Apple iOS (iPhone, iPad) -->
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
 
         <!-- Android / PWA -->
-        <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png"/>
-        <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png"/>
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png" />
 
         <!-- Web App Manifest -->
-        <link rel="manifest" href="favicon/site.webmanifest"/>
+        <link rel="manifest" href="favicon/site.webmanifest" />
 
         <!-- Color de barra del navegador (móvil) -->
         <meta name="theme-color" content="#0f1c2e" />
-        <meta name="msapplication-TileColor" content="#0f1c2e"/>
+        <meta name="msapplication-TileColor" content="#0f1c2e" />
 
+        <!-- META PIXEL — Core (va PRIMERO, define las funciones) -->
+        <script>
+            const MM_CONFIG = {
+                pixelId: "1027488963474619",
+                workerUrl: "https://7semanas-capi-worker.mentesmaestrasdigital.workers.dev",
+                debug: false,
+            };
+
+            window.__MM_eventId = function (eventName) {
+                return `${eventName}_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+            };
+
+            function getCookie(name) {
+                const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+                return match ? decodeURIComponent(match[2]) : "";
+            }
+
+            window.__MM_sendCAPI = async function (eventName, eventId, customData = {}) {
+                try {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const fbclid = urlParams.get("fbclid");
+                    if (fbclid) {
+                        document.cookie = `_fbc=fb.1.${Date.now()}.${fbclid};path=/;max-age=7776000`;
+                    }
+                    await fetch(MM_CONFIG.workerUrl, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            event_name: eventName,
+                            event_id: eventId,
+                            event_data: {
+                                page_url: window.location.href,
+                                fbc: getCookie("_fbc"),
+                                fbp: getCookie("_fbp"),
+                                custom_data: customData,
+                            },
+                        }),
+                    });
+                    if (MM_CONFIG.debug) console.log(`[MM CAPI] ✅ ${eventName}`, eventId);
+                } catch (e) {
+                    if (MM_CONFIG.debug) console.warn(`[MM CAPI] ❌ ${eventName}`, e);
+                }
+            };
+
+            window.__MM_track = function (eventName, data = {}) {
+                const eventId = window.__MM_eventId(eventName);
+                fbq("track", eventName, data, { eventID: eventId });
+                window.__MM_sendCAPI(eventName, eventId, data);
+                if (MM_CONFIG.debug) console.log(`[MM Pixel] 🔵 ${eventName}`, data);
+            };
+        </script>
+
+        <!-- META PIXEL — Base (va SEGUNDO, ahora __MM_eventId ya existe) -->
+        <script>
+            !(function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = "2.0";
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s);
+            })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+            fbq("init", "1027488963474619");
+
+            const pageViewEventId = window.__MM_eventId("PageView");
+            fbq("track", "PageView", {}, { eventID: pageViewEventId });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                window.__MM_sendCAPI("PageView", pageViewEventId);
+            });
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=1027488963474619&ev=PageView&noscript=1" />
+        </noscript>
     </head>
 
     <body>
@@ -747,5 +829,6 @@
         </footer>
 
         <script src="js/main.js" defer></script>
+        <script src="js/tracking.js" defer></script>
     </body>
 </html>
