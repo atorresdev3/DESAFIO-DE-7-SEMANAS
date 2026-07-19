@@ -1,8 +1,3 @@
-// ============================================================
-// META CONVERSIONS API - CLOUDFLARE WORKER
-// Proyecto: Desafío 7 Días (reconstrucción total desde cero)
-// ============================================================
-
 const PIXEL_ID = '1027488963474619';
 const META_CAPI_URL = `https://graph.facebook.com/v19.0/${PIXEL_ID}/events`;
 
